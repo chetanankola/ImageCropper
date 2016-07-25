@@ -87,42 +87,6 @@ class ViewController: UIViewController {
         }
         cropPath.close()
         
-        
-        
-        
-        
-        
-        let maskLayer = CAShapeLayer()
-        maskLayer.frame = gifImageView.frame
-        maskLayer.path = cropPath.cgPath
-        
-        
-        //Crops the original image
-//        gifImageView.layer.mask = maskLayer
-    
-        
-          // copies the original image and tries to crop on it
-//        var copiedCGImage :CGImage
-//        if let image = gifImageView.image {
-//            copiedCGImage = CGImage(copy:image.cgImage!)!
-//            
-//            
-//            faceImageView.image = UIImage(cgImage: copiedCGImage, scale: gifImageView.image!.scale, orientation: gifImageView.image!.imageOrientation)
-//            
-//            
-//            faceImageView.layer.mask = maskLayer
-//        }
-        
-//        let copiedCGImage = CGImage(copy: (gifImageView.image?.cgImage)!)!
-        
-        
-        
-        
-  
-//        faceImageView.layer.mask = maskLayer
-        
-        
-//        gifImageView.contentMode = .topLeft
         let imageSize = gifImageView.image!.size
         let viewSize = gifImageView.bounds.size
         let scale = imageSize.ratio > viewSize.ratio ? viewSize.width / imageSize.width : viewSize.height / imageSize.width
@@ -147,8 +111,9 @@ class ViewController: UIViewController {
     
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
+        canvasImageView.image = nil
         cropPointArray = []
+        
         swiped = false
         if let touch = touches.first {
             lastTouchPoint = touch.location(in: gifImageView)
