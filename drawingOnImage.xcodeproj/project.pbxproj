@@ -12,9 +12,6 @@
 		C57612111D4155B100454F3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C576120F1D4155B100454F3F /* Main.storyboard */; };
 		C57612131D4155B100454F3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C57612121D4155B100454F3F /* Assets.xcassets */; };
 		C57612161D4155B100454F3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C57612141D4155B100454F3F /* LaunchScreen.storyboard */; };
-		C576121E1D41847500454F3F /* IMG_3769.JPG in Resources */ = {isa = PBXBuildFile; fileRef = C576121D1D41847500454F3F /* IMG_3769.JPG */; };
-		C57612221D449D7800454F3F /* 062516_W_Ankola_0002.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C57612211D449D7700454F3F /* 062516_W_Ankola_0002.jpg */; };
-		C57612241D449EA300454F3F /* 062516_W_Ankola_0009.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C57612231D449EA300454F3F /* 062516_W_Ankola_0009.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,9 +22,6 @@
 		C57612121D4155B100454F3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C57612151D4155B100454F3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C57612171D4155B100454F3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C576121D1D41847500454F3F /* IMG_3769.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_3769.JPG; sourceTree = "<group>"; };
-		C57612211D449D7700454F3F /* 062516_W_Ankola_0002.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 062516_W_Ankola_0002.jpg; sourceTree = "<group>"; };
-		C57612231D449EA300454F3F /* 062516_W_Ankola_0009.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 062516_W_Ankola_0009.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,9 +57,6 @@
 				C576120B1D4155B100454F3F /* AppDelegate.swift */,
 				C576120D1D4155B100454F3F /* ViewController.swift */,
 				C576120F1D4155B100454F3F /* Main.storyboard */,
-				C576121D1D41847500454F3F /* IMG_3769.JPG */,
-				C57612211D449D7700454F3F /* 062516_W_Ankola_0002.jpg */,
-				C57612231D449EA300454F3F /* 062516_W_Ankola_0009.jpg */,
 				C57612121D4155B100454F3F /* Assets.xcassets */,
 				C57612141D4155B100454F3F /* LaunchScreen.storyboard */,
 				C57612171D4155B100454F3F /* Info.plist */,
@@ -134,11 +125,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C576121E1D41847500454F3F /* IMG_3769.JPG in Resources */,
 				C57612161D4155B100454F3F /* LaunchScreen.storyboard in Resources */,
-				C57612241D449EA300454F3F /* 062516_W_Ankola_0009.jpg in Resources */,
 				C57612131D4155B100454F3F /* Assets.xcassets in Resources */,
-				C57612221D449D7800454F3F /* 062516_W_Ankola_0002.jpg in Resources */,
 				C57612111D4155B100454F3F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,6 +297,7 @@
 				C576121C1D4155B100454F3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
