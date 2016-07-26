@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleDisplayName</key>
+	<string>FaceCrop</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Allowing access to camera lets you pick more faces and have more fun!</string>
 	<key>NSCameraUsageDescription</key>
