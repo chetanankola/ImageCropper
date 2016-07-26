@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11143.2"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -27,20 +28,25 @@
                                     <action selector="onOpenCameraRoll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tgv-si-Ykh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OPl-95-2lT">
+                                <state key="normal" title="Save"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="80r-Cu-b8q" secondAttribute="trailing" constant="113" id="1Oo-VD-0V4"/>
                             <constraint firstAttribute="trailing" secondItem="RQK-bD-PFY" secondAttribute="trailing" constant="10" id="C0f-Pn-ujb"/>
-                            <constraint firstItem="RQK-bD-PFY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="8" id="GMF-tJ-67s"/>
+                            <constraint firstItem="RQK-bD-PFY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="GMF-tJ-67s"/>
                             <constraint firstAttribute="trailing" secondItem="9gp-8l-2Xp" secondAttribute="trailing" id="HiN-vq-uS4"/>
+                            <constraint firstItem="OPl-95-2lT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="20" id="IGx-g6-qK2"/>
+                            <constraint firstItem="OPl-95-2lT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="LkC-PW-4LT"/>
                             <constraint firstAttribute="bottom" secondItem="fNY-21-ksk" secondAttribute="bottom" id="Mnb-O9-4Df"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="80r-Cu-b8q" secondAttribute="bottom" constant="538" id="OB9-jW-bcf"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9gp-8l-2Xp" secondAttribute="bottom" id="YRT-4k-caZ"/>
                             <constraint firstItem="fNY-21-ksk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Zoh-RR-ijJ"/>
                             <constraint firstItem="9gp-8l-2Xp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="aqa-04-sGg"/>
                             <constraint firstAttribute="trailing" secondItem="fNY-21-ksk" secondAttribute="trailing" id="cU0-2P-46q"/>
-                            <constraint firstItem="80r-Cu-b8q" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="e9X-Se-t9a"/>
+                            <constraint firstItem="80r-Cu-b8q" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="e9X-Se-t9a"/>
                             <constraint firstItem="9gp-8l-2Xp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="p1k-Kv-eAk"/>
                             <constraint firstItem="fNY-21-ksk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wCi-7w-dET"/>
                             <constraint firstItem="80r-Cu-b8q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="114" id="ySW-YY-Def"/>
