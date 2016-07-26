@@ -39,27 +39,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var canvasImageView: UIImageView!
     @IBOutlet weak var gifImageView: UIImageView!
     
-    
-    
-    let fileManager = FileManager.default
-    var directoryURL : URL {
-        do {
-            return try fileManager.urlForDirectory(.documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("FaceCrop", isDirectory: true)
-        } catch {
-            fatalError("unable to set faces directory url")
-        }
-    }
-    
-    func initFaceCropDirectory() {
-        do {
-            if !fileManager.fileExists(atPath: directoryURL.absoluteString!) {
-            try fileManager.createDirectory(at: directoryURL, withIntermediateDirectories: true, attributes: nil)
-            }
-        } catch {
-            print(error)
-            fatalError("failed to create stickers directory")
-        }
-    }
+
     
     
     @IBAction func onOpenCameraRoll(_ sender: AnyObject) {
@@ -67,29 +47,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     }
     @IBAction func onSaveFace(_ sender: AnyObject) {
-        saveFace()
+        croppedItemStore.saveFace(faceImage: faceImageView.image!)
+        dismiss(animated: true, completion: nil)
     }
     
     
     
-    func saveFace () {
-        let fileName = "\(UUID().uuidString).jpg"
-        guard let fileURL = try? directoryURL.appendingPathComponent(fileName) else {
-            fatalError("Unable to create sticker URL")
-        }
-        
-        var data: Data!
-        
-        do {
-            data = UIImagePNGRepresentation(faceImageView.image!)
-            try data.write(to: fileURL, options: .atomicWrite)
-            print("successfully created")
-        } catch {
-            print("failed to save face to disk : \(error)")
-        }
-        
-        
-    }
+    let croppedItemStore = CroppedItemStore()
     
     func openCamera () {
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
@@ -132,7 +96,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initFaceCropDirectory()
+        
+        
+        
         
     }
     
