@@ -35,37 +35,40 @@ extension UIImageView {
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
 
-    @IBOutlet weak var faceImageView: UIImageView!
-    @IBOutlet weak var canvasImageView: UIImageView!
-    @IBOutlet weak var gifImageView: UIImageView!
     
-
+    //FileSystem and Store stuff
+    let croppedItemStore = CroppedItemStore()
     
     
+    //Draw Variables
+    //Touch Point data
+    var lastTouchPoint = CGPoint.zero //last drawn point on view
+    var swiped = false //indicates if stroke is continuous
+    var cropPointArray = [CGPoint]()
+    //Drawing Params
+    var brushWidth: CGFloat = 2.0
+    
+    
+    
+    //Outlets
+    @IBOutlet weak var faceImageView: UIImageView!      // Has the cropped Face
+    @IBOutlet weak var canvasImageView: UIImageView!    // On which you draw
+    @IBOutlet weak var gifImageView: UIImageView!       // Image on which you perform crop
     @IBAction func onOpenCameraRoll(_ sender: AnyObject) {
         openCamera()
-
     }
     @IBAction func onSaveFace(_ sender: AnyObject) {
         croppedItemStore.saveFace(faceImage: faceImageView.image!)
         dismiss(animated: true, completion: nil)
     }
     
-    
-    
-    let croppedItemStore = CroppedItemStore()
-    
     func openCamera () {
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
             let imagePicker = UIImagePickerController()
-            
             imagePicker.delegate = self
-            
             imagePicker.sourceType = .photoLibrary
-            
             imagePicker.allowsEditing = false
             self.present(imagePicker, animated: true, completion: nil)
-            
         }
     }
     
@@ -74,36 +77,25 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        //TODO:should we enable edited image?
         if let pickedImage = info["UIImagePickerControllerOriginalImage"] as? UIImage {
             gifImageView.image = pickedImage
         } else {
             return
         }
-        
         dismiss(animated: true, completion: nil)
     }
 
-    
-    //Touch Point data
-    var lastTouchPoint = CGPoint.zero //last drawn point on view
-    var swiped = false //indicates if stroke is continuous
-    var cropPointArray = [CGPoint]()
-    
-    //Drawing Params
-    var brushWidth: CGFloat = 2.0
+
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        //only first time
+        //Automatically open camera when view Opens up
         if (gifImageView.image == nil) {
             openCamera()
         }

@@ -10,10 +10,19 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    @IBOutlet weak var image1: UIImageView!
+    @IBOutlet weak var image2: UIImageView!
+
+    let croppedItemStore = CroppedItemStore()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
+    
+        croppedItemStore.fetchItems().forEach { (image) in
+            image2.image = image
+        }
     }
 
     override func didReceiveMemoryWarning() {

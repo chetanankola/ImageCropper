@@ -56,7 +56,23 @@ class CroppedItemStore {
     }
 
     
-    func fetchItems() -> [URL] {
+    func fetchItems() -> [UIImage] {
+        let urls = fetchFileUrls()
+        var imageArray:[UIImage] = []
+        
+        urls.forEach { (url) in
+            if let imageData = try? Data(contentsOf: url) {
+                imageArray.append(UIImage(data: imageData)!)
+            }
+            
+            
+            
+        }
+
+        return imageArray
+    }
+    
+    func fetchFileUrls() -> [URL] {
         do {
             return try fileManager.contentsOfDirectory(
                 at: directoryURL,

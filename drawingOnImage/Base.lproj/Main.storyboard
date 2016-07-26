@@ -41,14 +41,34 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" id="hmz-eZ-vsr"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="wVy-t3-Uvv">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XV8-CL-Gok">
+                                        <frame key="frameInset" width="142" height="128"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AAP-R6-cuf">
+                                        <frame key="frameInset" minX="142" width="142" height="128"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="68a-RO-f5l"/>
+                                    <constraint firstAttribute="width" constant="284" id="RHM-AF-aLh"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ZtW-JO-crH" firstAttribute="centerX" secondItem="0UJ-Uj-ZKn" secondAttribute="centerX" id="8hJ-Dr-0yz"/>
                             <constraint firstItem="ZtW-JO-crH" firstAttribute="top" secondItem="fib-aw-ntJ" secondAttribute="bottom" id="Ijt-4Q-o5i"/>
+                            <constraint firstItem="wVy-t3-Uvv" firstAttribute="centerY" secondItem="0UJ-Uj-ZKn" secondAttribute="centerY" id="MYX-pT-UVJ"/>
+                            <constraint firstItem="wVy-t3-Uvv" firstAttribute="centerX" secondItem="0UJ-Uj-ZKn" secondAttribute="centerX" id="Ueu-Py-Q4b"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hEK-va-WjW"/>
+                    <connections>
+                        <outlet property="image1" destination="XV8-CL-Gok" id="8Vx-2U-E1a"/>
+                        <outlet property="image2" destination="AAP-R6-cuf" id="r06-Fg-FTf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DeV-Wv-orI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
