@@ -18,13 +18,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="testImage" translatesAutoresizingMaskIntoConstraints="NO" id="fNY-21-ksk" userLabel="gifImageView"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fNY-21-ksk" userLabel="gifImageView"/>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9gp-8l-2Xp" userLabel="canvasImageView"/>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="80r-Cu-b8q" userLabel="faceImageView"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQK-bD-PFY">
+                                <state key="normal" title="Camera Roll"/>
+                                <connections>
+                                    <action selector="onOpenCameraRoll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tgv-si-Ykh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="80r-Cu-b8q" secondAttribute="trailing" constant="113" id="1Oo-VD-0V4"/>
+                            <constraint firstAttribute="trailing" secondItem="RQK-bD-PFY" secondAttribute="trailing" constant="10" id="C0f-Pn-ujb"/>
+                            <constraint firstItem="RQK-bD-PFY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="8" id="GMF-tJ-67s"/>
                             <constraint firstAttribute="trailing" secondItem="9gp-8l-2Xp" secondAttribute="trailing" id="HiN-vq-uS4"/>
                             <constraint firstAttribute="bottom" secondItem="fNY-21-ksk" secondAttribute="bottom" id="Mnb-O9-4Df"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="80r-Cu-b8q" secondAttribute="bottom" constant="538" id="OB9-jW-bcf"/>
@@ -49,7 +57,4 @@
             <point key="canvasLocation" x="140" y="138.98050974512745"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="testImage" width="5760" height="3840"/>
-    </resources>
 </document>
